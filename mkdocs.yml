@@ -1,12 +1,17 @@
 site_name: Omeka S User Manual
 theme:
-    name: 'readthedocs'
-    custom_dir: 'omeka/'
-    include_homepage_in_sidebar: true
-site_url: 'https://omeka.org/s/'
+    name: material
+    features:
+        - search.suggest
+        - search.highlight
+    # name: 'readthedocs'
+    # custom_dir: 'omeka/'
+    # include_homepage_in_sidebar: true
+# site_url: 'https://omeka.org/s/'
+site_url: "https://nakamura196.github.io/omeka-s-enduser/"
 repo_url: 'http://github.com/omeka/omeka-s-enduser'
-extra_css:
-    - css/extra.css
+# extra_css:
+#     - css/extra.css
 markdown_extensions:
     - admonition
     - attr_list
@@ -84,3 +89,24 @@ nav:
         - errorLogging.md
         - translateOmekaS.md
         - configuration.md
+
+plugins:
+    - i18n:
+        docs_structure: suffix
+        languages:
+            - locale: en
+              default: true
+              name: English
+              build: true
+            - locale: ja
+              name: Japanese
+              build: true
+    - search
+extra:
+  alternate:
+    - name: English
+      link: /omeka-s-enduser/
+      lang: en
+    - name: 日本語
+      link: /omeka-s-enduser/ja/
+      lang: ja
